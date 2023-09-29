@@ -1,0 +1,38 @@
+---
+interface Props {
+  path: string;
+  text1: string;
+  text2: string;
+}
+
+const { path, text1, text2 } = Astro.props;
+---
+
+<style>
+  .purple {
+    line-height: 25px;
+    color: #48389c;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+  }
+</style>
+
+<div class="relative rounded-xl border border-[#9796C0] h-[162px]">
+  <div>
+    <img class="rounded-xl h-[160px]" src={path} alt="" />
+  </div>
+  <div class="absolute z-10 top-5 left-5 space-y-3 sm:space-y-5">
+    <div class="purple">
+      <h2>{text1}</h2>
+      <h2>{text2}</h2>
+    </div>
+    <button
+      class="text-base flex flex-wrap gap-3 h-11 px-3 items-center bg-[#E98135] rounded-[5px] text-white m-0"
+    >
+      <span>VIEW PRODUCTS</span>
+      <img src="../../public/assets/Vector2.svg" alt=">" />
+    </button>
+  </div>
+</div>

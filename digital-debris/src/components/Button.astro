@@ -1,0 +1,14 @@
+---
+interface Props {
+  data: string;
+}
+
+const { data } = Astro.props;
+---
+
+<button
+class="text-base flex justify-evenly h-11 w-[209px] items-center bg-[#E98135] rounded-[5px] text-white m-auto md:m-0"
+>
+<span> {data}</span>
+<img src="../../public/assets/Vector2.svg" alt=">" />
+</button>

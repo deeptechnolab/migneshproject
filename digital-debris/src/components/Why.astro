@@ -1,0 +1,36 @@
+---
+interface Props {
+  path: string;
+  head: string;
+  para1: string;
+  para2: string;
+  para3: string;
+}
+
+const { para1, para2, para3, path, head } = Astro.props;
+---
+
+<div class="flex flex-col lg:flex-row gap-2 max-sm:w-[80%] mx-auto">
+  <div>
+    <img class="max-w-[200px]" src={path} alt="" />
+  </div>
+  <div>
+    <h3 class="purple">{head}</h3>
+    <ul class="list-disc ps-5">
+      <li>{para1}</li>
+      <li>{para2}</li>
+      <li>{para3}</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .purple {
+    color: #48389c;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+  }
+</style>
